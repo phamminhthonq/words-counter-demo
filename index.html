@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DEMO - Character Counter | PMT</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<div class="container">
+  	<h1>Word Counter by PMT</h1>
+  	<textarea placeholder="Nhập văn bản của bạn ở đây..."></textarea>
+  <div class="output row">
+		<div>Ký tự: <span id="characterCount">0</span></div>
+		<div>Từ: <span id="wordCount">0</span></div>
+  </div>
+  <div class="output row">
+		<div>Câu: <span id="sentenceCount">0</span></div>
+		<div>Đoạn: <span id="paragraphCount">0</span></div>
+  </div>
+  <div class="output row">
+		<div>Thời gian đọc: <span id="readingTime">0</span></div>
+		<a id="readability" href="#">Way back home</a>
+  </div>
+  	<div class="keywords">
+			Ký tự dùng nhiều nhất:
+	<ul id="topKeywords"></ul>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
