@@ -37,7 +37,8 @@ body {
 #fb{
 	color: #111;
 	text-decoration: none;
-	cursor: pointer: 
+	cursor: pointer;
+	transition: 0.3s ease;
 }
 #fb:hover{
 	color: #00a5cf;
