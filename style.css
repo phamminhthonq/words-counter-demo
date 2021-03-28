@@ -34,7 +34,14 @@ body {
 	color: #111;
 	max-height: 100%;
 }
-
+#fb{
+	color: #111;
+	text-decoration: none;
+	cursor: pointer: 
+}
+#fb:hover{
+	color: #00a5cf;
+}
 .container {
 	margin: 2% auto;
 	width: 100%;
