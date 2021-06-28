@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>DEMO - Character Counter | PMT</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta property="og:url" content="https://phamminhthonq.github.io/words-counter-demo/"/>
-	<meta property="og:title" content="Công cụ đếm được từ, đếm được câu, đếm được đoạn văn nhưng không đếm được số ngày bạn và nó yêu nhao :))" />
-	<meta property="og:description" content="Công cụ đếm được từ, đếm được câu, đếm được đoạn văn nhưng không đếm được số ngày bạn và nó yêu nhao :), giúp so sánh độ dài của các đoạn văn, văn bản một cách dễ dàng" />
-	<link rel="image_src" type="image/jpeg" href="banner.jpg" />
-	<meta property="article:author" content="https://phamminhthonq.github.io/words-counter-demo/"/>
-	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-	<meta name="AUTHOR" content="Pmint" />
-	<meta name="COPYRIGHT" content="Copyright (C) 2020 @Pmint" />
-	<meta name="RATING" content="GENERAL"/>
-<body>
-	<div class="container">
-	<h1>Word Counter by <a id="fb" href="https://fb.com/pmint05" target="_blank">@Pmint</a></h1>
-  	<textarea placeholder="Nhập văn bản của bạn ở đây..."></textarea>
-  <div class="output row">
-		<div>Ký tự: <span id="characterCount">0</span></div>
-		<div>Từ: <span id="wordCount">0</span></div>
-  </div>
-  <div class="output row">
-		<div>Câu: <span id="sentenceCount">0</span></div>
-		<div>Đoạn: <span id="paragraphCount">0</span></div>
-  </div>
-  <div class="output row">
-		<div>Thời gian đọc: <span id="readingTime">0</span></div>
-		<a id="readability" href="#">Way back home</a>
-  </div>
-  	<div class="keywords">
-			Ký tự dùng nhiều nhất:
-	<ul id="topKeywords"></ul>
-  </div>
-</div>
-<script src="app.js"></script>
-</body>
+
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Character Counter</title>
+		
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
+		<meta property="og:url" content="https://phamminhthonq.github.io/words-counter-demo/"/>
+		<meta property="og:title" content="Công cụ đếm được từ, đếm được câu, đếm được đoạn văn nhưng không đếm được số ngày bạn và nó yêu nhao :))" />
+		<meta property="og:description" content="Công cụ đếm được từ, đếm được câu, đếm được đoạn văn nhưng không đếm được số ngày bạn và nó yêu nhao :), giúp so sánh độ dài của các đoạn văn, văn bản một cách dễ dàng" />
+		<meta property="article:author" content="https://pmint05.github.io/words-counter-demo/"/>
+		<meta name="AUTHOR" content="Pmint" />
+		<meta name="COPYRIGHT" content="Copyright (C) 2020 @Pmint" />
+		<meta name="RATING" content="GENERAL"/>
+
+		<link rel="image_src" type="image/jpeg" href="assets/img/thumbnail.jpg"/>
+		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1><a href="https://pmint05.github.io/">Word Counter.</a></h1>
+			<textarea placeholder="Nhập văn bản của bạn ở đây..." class="input"></textarea>
+			<div class="index">
+				<div class="info">
+					<div class="output row">
+						<div>• Ký tự: <span id="characterCount">0</span></div>
+						<div>• Từ: <span id="wordCount">0</span></div>
+					</div>
+					<div class="output row">
+						<div>• Câu: <span id="sentenceCount">0</span></div>
+						<div>• Đoạn: <span id="paragraphCount">0</span></div>
+					</div>
+					<div class="output row" id="time">
+						<div>• Thời gian đọc: <span id="readingTime">0</span></div>
+					</div>
+				</div>
+				<div class="keywords">• Ký tự dùng nhiều nhất:
+					<ul id="topKeywords"></ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="credit">Copyright © 2021<a id="fb" href="https://fb.com/pmint05" target="_blank">_pmint05_</a>All Right Reservered</div> 
+		
+		<script src="assets/js/app.js" charset="utf-8"></script>
+		<script type="text/javascript">
+		$('textarea.input').on('keyup', function() {
+			// scrollbars apreared
+			if (this.clientHeight < this.scrollHeight) {
+				$(this).css('border-bottom-right-radius', '5px');
+				$(this).css('border-top-right-radius', '5px');
+			} else {
+				$(this).css('border-bottom-right-radius', '15px');
+				$(this).css('border-top-right-radius', '15px');
+			}
+		});
+
+		</script>
+
+	</body>
+
 </html>

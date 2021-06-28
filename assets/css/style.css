@@ -1,0 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/* border box */
+
+html {
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	/* Chrome all / Safari all */
+	-moz-user-select: none;
+	/* Firefox all */
+	-ms-user-select: none;
+	/* IE 10+ */
+	user-select: none;
+	/* Likely future */
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+b {
+	font-weight: bold;
+}
+a {
+	text-decoration: none;
+	color: initial;
+}
+
+/* main app styles */
+
+body {
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 30px;
+	padding-bottom: 0px;
+	box-sizing: border-box;
+	background-color: #FAFAFA;
+	font-family: 'Poppins', sans-serif;
+	color: #111;
+	overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+}
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+body::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}
+
+#fb{
+	color: #111;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.3s ease;
+	font-family: 'Montserrat', sans-serif;
+}
+#fb:hover{
+	color: #00a5cf;
+}
+.container {
+	width: 100%;
+	height: calc(100vh - 40px - 25px);
+	overflow: hidden;
+	padding: 25px;
+	padding-top: 0px;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 900;
+	text-align: center;
+	margin: 0;
+}
+
+textarea {
+	width: 100%;
+	height: 250px;
+	padding: 10px;
+	border: 2px solid #d9d9d9;
+	border-radius: 15px;
+	outline: none;
+	font-size: 1rem;
+	resize: none;
+	line-height: 1.2rem;
+	transition: 0.3s ease-in-out;
+}
+textarea::-webkit-scrollbar {
+	width: 5px;
+	border-radius: 2.5px;
+	margin-right: 5px !important;
+}
+textarea::-webkit-scrollbar-track {
+	border-radius: 2.5px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+	
+}
+textarea::-webkit-scrollbar-thumb {
+	border-radius: 2.5px;
+	background-color: darkgrey;
+}
+
+textarea:hover {
+	border-color: #979797;
+}
+
+textarea:focus {
+	border-color: #4D90FE;
+}
+.index {
+	width: 100%;
+	height: calc(90vh - 250px - 72px - 50px);
+	display: flex;
+	position: relative;
+	margin-top: 15px;
+	overflow: hidden;
+}
+.info {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s ease-in-out;
+	overflow: scroll;
+}
+.info::-webkit-scrollbar {
+	width: 0;
+}
+.info.active{
+	width: 50%;
+	margin-right: 50px;
+}
+
+.output.row {
+	border: 1px solid #DDD;
+	font-size: 1.2rem;
+	margin: 5px 0;
+	background-color: #F9F9F9;
+	display: flex;
+	border-radius: 15px;
+}
+.output.row:first-child {
+	margin-top: 0px;
+}
+
+.output.row div {
+	display: inline-block;
+	width: 50%;
+	padding: 15px;
+}
+#time div {
+	width: 100%;
+}
+
+.output.row span {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+
+.keywords {
+	position: relative;
+	display: none;
+	height: 100%;
+	margin: 0 0;
+	font-size: 1.5rem;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	width: 50%;
+}
+
+.keywords ul {
+	font-weight: 800;
+	height: 80%;
+	border: 1px solid #DDD;
+	font-size: 1rem;
+	background-color: #F9F9F9;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	word-wrap: break-word;
+	border-radius: 15px;
+	padding: 10px !important;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	opacity: 0;
+	overflow-y: scroll;
+}
+.keywords ul::-webkit-scrollbar {
+	width: 0px;
+}
+
+.keywords li {
+	position: relative;
+	display: inline-block;
+	padding: 10px;
+	margin: 0;
+}
+
+.credit {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-top: 10px;
+	line-height: 20px;
+}
+
+/*
+** Making it responsive
+*/
+
+@media only screen and (max-width: 992px){
+	body {
+		padding: 0px;
+	}
+	.container {
+		width: 100%;
+		height: calc(100vh - 40px);
+		padding: 25px;
+		padding-top: 0px;
+		border-radius: 0px;
+	}
+	
+	h1 {
+		font-size: 2rem;
+		font-weight: 900;
+	}
+	
+	textarea {
+		width: 100%;
+		height: 50vh;
+		padding: 10px;
+		border: 2px solid #d9d9d9;
+		border-radius: 15px;
+		outline: none;
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.index {
+		width: 100%;
+		height: calc(50vh - 120px);
+		display: flex;
+		position: relative;
+		margin-top: 15px;
+		overflow: hidden;
+	}
+	.info {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+	.output.row {
+		font-size: 1rem;
+		margin: 5px 0;
+	}
+	
+	.output.row div {
+		padding: 10px;
+	}
+	
+	.output.row span {
+		font-size: 1rem;
+	}
+	
+
+	
+	.keywords {
+		position: relative;
+		display: none;
+		height: 100%;
+		margin: 0 0;
+		font-size: 1.5rem;
+		font-weight: 900;
+		font-family: 'Montserrat', sans-serif;
+		width: 50%;
+	}
+	.credit {
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		margin-top: 10px;
+		line-height: 20px;
+	}
+	
+}
+@media only screen and (max-width: 500px) {
+	body {
+		padding: 0px;
+	}
+	.container {
+		width: 100%;
+		height: calc(100vh - 30px);
+		padding: 20px;
+		padding-top: 0px;
+		border-radius: 0px;
+	}
+	
+	h1 {
+		font-size: 2rem;
+	}
+	
+	textarea {
+		width: 100%;
+		height: 50vh;
+		outline: none;
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.index {
+		width: 100%;
+		height: calc(50vh - 110px);
+		margin-top: 15px;
+	}
+	.info {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		margin-right: 10px !important;
+	}
+	.output.row {
+		font-size: 0.8rem;
+		margin: 5px 0;
+		display: flex;
+		flex-direction: column;
+		border-radius: 10px;
+	}
+	
+	.output.row div {
+		padding: 2px 15px;
+		width: 100%;
+	}
+	
+	.output.row span {
+		font-size: 1rem;
+	}
+	#readingTime {
+		word-break: break-all;
+	}
+	
+	.keywords {
+		position: relative;
+		display: none;
+		height: 100%;
+		margin: 0 0;
+		font-size: 1rem;
+		font-weight: 900;
+		width: 50%;
+	}
+	.keywords ul {
+		height: 70%;
+		font-size: 0.8rem;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		border-radius: 10px;
+		padding: 5px !important;
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+
+	.keywords li {
+		padding: 5px;
+	}
+	.credit {
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		margin-top: 5px;
+		line-height: 20px;
+		font-size: 0.8rem;
+	}
+	
+}
